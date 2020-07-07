@@ -1,8 +1,10 @@
-[{
+[
+    {
         "sucursal": "3 de Febrero",
         "direccion": "Caseros 1678, B1678 Caseros Partido de Tres de Febrero, Provincia de Buenos Aires",
         "telefono": "(011) 4758-6780",
-        "autos": [{
+        "autos": [
+            {
                 "marca": "volkswagen",
                 "modelo": "scirocco",
                 "anio": 2016,

@@ -1,10 +1,23 @@
 const fs = require('fs');
-db:'./data/consecionarias.json';
+const db = './data/concesionarias.json';
+let file=fs.readFileSync(db, 'utf-8')
+let consecionarias = JSON.parse(file);
 
 const homeControler = {
-    leerJSON:()=>{
-        let consecionariasJSON=fs.readFileSync(this.db, 'utf-8');
-        let consecionarias = JSON.parse(consecionariasJSON);
-        return consecionarias;
+    bienvenida:(req, res)=>{
+             
+        res.write('-----------------------------------------------------------------\n')
+        res.write('Bienvenidos a nuestra concesionaria!\n');
+        res.write('-----------------------------------------------------------------\n\n')
+        res.write('Nuestras sucursales son: \n\n');
+        for(let consecionaria of consecionarias){
+        res.write('* '+consecionaria.sucursal+'\n')
+   
+        }res.end()
+        
+
     }
+    
+
 }
+module.exports = homeControler;

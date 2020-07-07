@@ -11,3 +11,6 @@ app.listen(3030, () =>{
 });
 //metodo de express
 app.use('/', rutaHome);
+app.use('/sucursales',rutaSucursales);
+app.use('/marcas', rutaMarcas);
+app.use('/autos', rutaAutos);

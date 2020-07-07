@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router()
-const sucursales = require('../controler/sucursalesControler')
+const sucursales = require('../controller/sucursalesController')
 
-router.get('/', sucursalesControler.index)
-router.get('/:id', sucursalesControler.id);
+router.get('/', sucursales.todasSucursales)
+router.get('/:sucursal', sucursales.buscarSucursal);
 module.exports = router;
